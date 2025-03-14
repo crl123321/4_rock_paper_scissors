@@ -29,6 +29,11 @@ scissors = '''
 
 moves = [rock, paper, scissors]
 you = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+
+if you < 0 or you > 2:
+    print("Invalid input. You lose!")
+    exit()
+
 print(moves[you])
 opponent = random.randint(0,2)
 print(f"Computer chose:\n{moves[opponent]}")
